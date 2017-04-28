@@ -1,0 +1,202 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    padding: 0px;
+    margin: 0px;
+    font-size: 15px; line-height: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    margin: 50px auto;
+    width: 1170px;
+}
+
+.container:before, .container:after {
+    content: " ";
+    display: table;
+}
+
+.container:after {
+    clear: both;
+}
+
+/* No JS Tab */
+
+.jf-tabbing {
+    width: 100%;
+}
+
+.jf-tabbing .hideRadio {
+    left: -10000px;
+    position: absolute;
+}
+
+.jf-tabbing .treadStone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.jf-tabbing .treadStone .tsList {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-height: 40px;
+}
+
+.jf-tabbing .treadStone .content {
+    background-color: #fff;
+    padding: 20px;
+    display: none;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+}
+
+.jf-tabbing .tsList {
+    display: inline-block;
+    padding: 10px;
+    vertical-align: top;
+    background-color: #eee;
+    cursor: pointer;
+    text-align: center;
+}
+
+.jf-tabbing .tsList:hover {
+    background-color: #fff;
+}
+
+#tab-list-1:checked ~ .tsBox #lbl-tab-list-1,
+#tab-list-2:checked ~ .tsBox #lbl-tab-list-2,
+#tab-list-3:checked ~ .tsBox #lbl-tab-list-3,
+#tab-list-4:checked ~ .tsBox #lbl-tab-list-4,
+#tab-list-5:checked ~ .tsBox #lbl-tab-list-5{
+    background-color: #fff;
+    border-left-color: #69be28;
+}
+
+#tab-list-1:checked ~ .tsBox #tab-box-1,
+#tab-list-2:checked ~ .tsBox #tab-box-2,
+#tab-list-3:checked ~ .tsBox #tab-box-3,
+#tab-list-4:checked ~ .tsBox #tab-box-4,
+#tab-list-5:checked ~ .tsBox #tab-box-5{
+    display: block;
+}
+
+@media screen and (max-width: 1169px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 610px) {
+
+    .container {
+        width: 100%;
+    }
+
+    .treadStone {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .treadStone .tsList {
+        background: #fff;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .treadStone .tsList:last-of-type {
+        border-bottom: none;
+    }
+
+    .treadStone #lbl-tab-list-1 {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+    }
+
+    .treadStone #lbl-tab-list-2 {
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+        order: 3;
+    }
+
+    .treadStone #lbl-tab-list-3 {
+        -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+        order: 5;
+    }
+
+    .treadStone #lbl-tab-list-4 {
+        -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+        order: 7;
+    }
+
+    .treadStone #lbl-tab-list-5 {
+        -webkit-box-ordinal-group: 10;
+        -ms-flex-order: 9;
+        order: 9;
+    }
+
+    .treadStone #tab-box-1 {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+
+    .treadStone #tab-box-2 {
+        -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+        order: 4;
+    }
+
+    .treadStone #tab-box-3 {
+        -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+        order: 6;
+    }
+
+    .treadStone #tab-box-4 {
+        -webkit-box-ordinal-group: 9;
+        -ms-flex-order: 8;
+        order: 8;
+    }
+
+    .treadStone #tab-box-5 {
+        -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+        order: 10;
+    }
+
+    #tab-list-1:checked ~ .tsBox #lbl-tab-list-1,
+    #tab-list-2:checked ~ .tsBox #lbl-tab-list-2,
+    #tab-list-3:checked ~ .tsBox #lbl-tab-list-3,
+    #tab-list-4:checked ~ .tsBox #lbl-tab-list-4,
+    #tab-list-5:checked ~ .tsBox #lbl-tab-list-5{
+        border-bottom: none;
+        background-color: #666;
+        color: #fff;
+    }
+
+    #tab-list-1:checked ~ .tsBox #tab-box-1,
+    #tab-list-2:checked ~ .tsBox #tab-box-2,
+    #tab-list-3:checked ~ .tsBox #tab-box-3,
+    #tab-list-4:checked ~ .tsBox #tab-box-4,
+    #tab-list-5:checked ~ .tsBox #tab-box-5{
+        border-bottom: 1px solid #ccc;
+    }
+}
